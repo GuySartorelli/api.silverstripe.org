@@ -17,7 +17,6 @@ jobs:
   build:
     name: Build site
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'silverstripe'
     permissions:
       contents: read
     steps:
@@ -48,7 +47,6 @@ jobs:
     name: Deploy site
     needs: build
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'silverstripe'
     permissions:
       pages: write
       id-token: write
